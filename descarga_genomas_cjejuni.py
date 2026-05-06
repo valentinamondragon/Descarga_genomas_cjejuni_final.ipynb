@@ -76,7 +76,7 @@ for link in links:
     print("Descargando:", nombre)
     urllib.request.urlretrieve(link, destino)
 
-print("Descarga completa ✅")
+print("Descarga completa")
 
 handle = Entrez.esearch(
     db="assembly",
@@ -122,7 +122,7 @@ for link in links:
     else:
         print("Ya existe (omitido):", filename)
 
-print("✅ Descarga completa")
+print("Descarga completa")
 
 import gzip
 import shutil
@@ -139,7 +139,7 @@ for file in os.listdir(output_dir):
             with open(out_path, 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
 
-print("✅ Archivos descomprimidos")
+print("Archivos descomprimidos")
 
 for file in os.listdir(output_dir):
     if file.endswith(".gz"):
